@@ -1,0 +1,87 @@
+<h1 class="page-header" *ngFor="let customer of customers">{{customer.name}}</h1>
+
+<div class="row placeholders">
+    <div class="col-md-4" style="margin:0; padding:0">
+        <h1 align="left">DDTS</h1>
+        <span class="text-muted">Source: BaseStation1</span>
+    </div>
+
+    <div class="col-xs-8 col-sm-4 col-md-8 placeholder">
+        <div align="left">
+            <h4>Fleet Location</h4>
+            <ul style="list-style-type:none; margin:0; padding:0">
+                <li><span class="text-muted">123 Main Street</span></li>
+                <li><span class="text-muted">Smalltown, CA 92113</span></li>
+                <li><span class="text-muted">(123) 333-4455</span></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <!-- FUEL USED -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- MILEAGE -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- RUN HOURS -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2 class="sub-header">Fleet Vehicles</h2>
+
+<div *ngFor="let vehicle of fleet">
+    <h3>{{vehicle.name}}</h3>
+    <span>VIN: {{vehicle.vin}}</span>
+</div>
+
+
+<button (click)="goBack()" class="btn btn-default">Back</button>

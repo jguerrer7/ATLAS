@@ -1,0 +1,33 @@
+{
+	"vehicles":
+	[
+
+		{"id": 1, "owner":"DDTS", "fleet": 1, "vin": 123456789, "name": "Truck 1"},
+		{"id": 2, "owner":"DDTS", "fleet": 1, "vin": 123456789, "name": "Truck 2"},
+		{"id": 3, "owner":"DDTS", "fleet": 1, "vin": 123456789, "name": "Truck 3"},
+		{"id": 4, "owner":"DDTS", "fleet": 2, "vin": 123456789, "name": "Truck 4"},
+		{"id": 5, "owner":"DDTS", "fleet": 2, "vin": 123456789, "name": "Truck 5"},
+		{"id": 6, "owner":"DDTS", "fleet": 2, "vin": 123456789, "name": "Truck 6"},
+		{"id": 7, "owner":"DDTS", "fleet": 3, "vin": 123456789, "name": "Truck 7"},
+		{"id": 8, "owner":"DDTS", "fleet": 3, "vin": 123456789, "name": "Truck 8"},
+		{"id": 9, "owner":"DDTS", "fleet": 3, "vin": 123456789, "name": "Truck 9"}
+
+	],
+
+	"fleets":
+	[
+		{"id": 1, "owner":"DDTS", "fleet": 1, "name": "Fleet 1"},
+		{"id": 2, "owner":"DDTS", "fleet": 2, "name": "Fleet 2"},
+		{"id": 3, "owner":"DDTS", "fleet": 3, "name": "Fleet 3"}
+	],
+	
+
+	"customers":
+	[
+		{"id":1, "name":"Dr. Diesel Technologies", "owner":"DDTS"},
+		{"id":2, "name":"Not Dr. Diesel Technologies", "owner":"NOT DDTS"}
+	]
+
+}
+
+
