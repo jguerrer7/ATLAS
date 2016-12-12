@@ -14,17 +14,21 @@ export class VehicleService {
     private searchVehicle: string;
     private getCustomerUrl: string;
     private getFleetsUrl: string;
+    private getVehicleUrl: string;
 
     constructor(private _http:Http){
 
     }
 
-    getVehicles() {
+    getVehicle(str:string) {
+        this.getVehicleUrl='http://localhost:3000/vehicles?id='+str;
+        return this._http.get(this.getVehicleUrl)
+            .map(res => res.json());
 
     }
 
-    getCustomer() {
-        this.getCustomerUrl='http://localhost:3000/customers/?id=1'; // temp hard coding value
+    getCustomer(str:string) {
+        this.getCustomerUrl='http://localhost:3000/customers?id='+str;
         return this._http.get(this.getCustomerUrl)
             .map(res => res.json());
     }
@@ -37,7 +41,7 @@ export class VehicleService {
     }
 
     searchFleet(str:string) {
-        this.searchFleetUrl='http://localhost:3000/vehicles/?fleet='+str; // mock server w/ REST API
+        this.searchFleetUrl='http://localhost:3000/vehicles?fleet='+str; // mock server w/ REST API
         return this._http.get(this.searchFleetUrl)
             .map(res => res.json());
     }

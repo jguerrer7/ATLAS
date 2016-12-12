@@ -1,63 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-//Import class
-import { Vehicle } from '../../classes/Vehicle/Vehicle';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/switchMap';
 
 // Import service
 import { VehicleService } from '../../services/vehicle-service/vehicle-service';
+
+//Import class
+import { Vehicle } from '../../classes/Vehicle/Vehicle';
 
 @Component({
     moduleId: module.id,
     selector: 'vehicleOverview',
     templateUrl: 'vehicle-overview.component.html',
-    providers: [ VehicleService ]
+    styleUrls: ['vehicle-overview.component.css'],
+    providers: [VehicleService]
 
 })
 
-export class VehicleOverviewComponent implements OnInit{ 
-    id: string;
+export class VehicleOverviewComponent implements OnInit {
     vehicles: Vehicle[];
-    
-    // Sample spotify constructor
-    /*
-    constructor(
-        private _service:Service,
-        private _route:ActivatedRoute){
 
-    } */
-    
     // Define service via constructor instead of initializing each component load 
-    constructor( 
-        private _vehicleService: VehicleService,
-        private _route:ActivatedRoute
-    ){ }
-
-    getVehicles(): void {
-        this.vehicles = this._vehicleService.getVehicles();
-    }
+    constructor(
+        private _service: VehicleService,
+        private _route: ActivatedRoute,
+        private _location: Location
+    ) { }
 
     ngOnInit(): void {
-        this.getVehicles();
 
-    }
-    // Sample data mapping from API
-    /*
-    ngOnInit(){
         this._route.params
             .map(params => params['id'])
             .subscribe((id) => {
-                this._service.getArtist(id)
-                .subscribe(artist => {
-                    this.artist = artist;
-                })
-
-                this._service.getAlbums(id)
-                .subscribe(albums => {
-                    this.albums = albums.items;
-                })
+                this._service.getVehicle(id)
+                    .subscribe(vehicles => {
+                        this.vehicles = vehicles;
+                    })
             })
-
     }
-    */
+
+    goBack(): void {
+        this._location.back();
+    }
+
 }

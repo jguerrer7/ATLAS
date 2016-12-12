@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'fleet/:id', component: FleetStatusComponent },
+  { path: 'vehicle/:id', component: VehicleOverviewComponent }
 ];
 
 @NgModule({

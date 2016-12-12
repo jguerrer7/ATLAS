@@ -1,0 +1,60 @@
+<div *ngFor="let fleet of fleets">
+<div class="row">
+    <h3>Fleet {{fleet.id}}</h3>
+</div>
+<div class="row">
+    <!-- FUEL USED -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- MILEAGE -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- RUN HOURS -->
+    <div class="col-md-4">
+        <div>
+            <div style="display: block">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

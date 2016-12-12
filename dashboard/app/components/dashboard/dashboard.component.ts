@@ -33,13 +33,4 @@ export class DashboardComponent implements OnInit {
         
     }
 
-    /*
-    searchFleet(){
-        this._service.searchFleet(this.searchStr)
-            .subscribe(res => {
-                this.searchRes = res.artists.items;
-
-            })
-    }
-    */
 }

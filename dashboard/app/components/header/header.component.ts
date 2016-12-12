@@ -13,14 +13,13 @@ import { Fleet } from '../../classes/Fleet/Fleet';
 
 @Component({
     moduleId: module.id,
-    selector: 'fleetStatus',
-    templateUrl: 'fleet-status.component.html',
-    styleUrls: ['fleet-status.component.css'],
-    providers: [ VehicleService ],
+    selector: 'header',
+    templateUrl: 'header.component.html',
+    providers: [VehicleService],
 })
 
-export class FleetStatusComponent implements OnInit {
-    customers: Customer;
+export class HeaderComponent implements OnInit {
+    customers: Customer[] = [];
     fleet: Fleet[];
 
     constructor(
@@ -29,21 +28,15 @@ export class FleetStatusComponent implements OnInit {
         private _route: ActivatedRoute
     ) { }
 
-    ngOnInit(): void {
+    private id: string = '1';
 
-        this._route.params
-            .map(params => params['id'])
-            .subscribe((id) => {
-                this._service.searchFleet(id)
-                .subscribe(fleet => {
-                    this.fleet = fleet;
-                })
+    ngOnInit(): void {
+        this._service.getCustomer(this.id)
+            .subscribe(customers => {
+                this.customers = customers;
             })
         
-    }
+}
 
-    goBack(): void {
-        this._location.back();
-    }
 
 }
