@@ -28,8 +28,7 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit(): void{
-        this._service.getCustomer()
-            .subscribe(customer => this.customer);
+       
         
     }
 

@@ -10,7 +10,17 @@
 
             <div>
                 <div id="vehicle" class="transition">
-                    <span><a [routerLink]="['/vehicle', vehicle.id]">{{vehicle.name}}</a></span> 
+                    <span><a [routerLink]="['/vehicle', vehicle.id]">{{vehicle.name}}</a></span>
+                    <br>
+                    <span>Brief details of the vehicle and metrics</span>
+                </div>
+                <div style="margin-left: 1em; margin-top: 1em; ">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-cogs"></i> DTC <span class="badge">1</span>
+                    </button>
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-exclamation-triangle"></i> Triggers <span class="badge">0</span>
+                    </button>
                 </div>
             </div>
 
@@ -22,4 +32,4 @@
     </div>
 </div>
 
-<button (click)="goBack()" class="btn btn-default" style="position:absolute; left: 0; bottom:-50;">Back</button>
+<button (click)="goBack()" class="btn btn-default" style="margin-top:2em">Back</button>

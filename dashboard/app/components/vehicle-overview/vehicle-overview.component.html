@@ -1,5 +1,88 @@
-<div class="container" *ngFor="let vehicle of vehicles">
-    <span>{{vehicle.name}}</span>
+<div *ngFor="let vehicle of vehicles">
+    <h2 class="sub-header">{{vehicle.name}}</h2>
+
+    <div class="row" style="margin-bottom: 2em;">
+
+        <div class="col-md-3">
+            <img src="http://angularscript.com/wp-content/uploads/2015/04/ngRadialGauge.jpg" style="zoom: 85%;">
+            <h3 align="center" style="margin-top: -2em;">Fuel</h3>
+        </div>
+        <div class="col-md-3">
+            <img src="http://angularscript.com/wp-content/uploads/2015/04/ngRadialGauge.jpg" style="zoom: 85%;">
+            <h3 align="center" style="margin-top: -2em;">Oil Pressure</h3>
+        </div>
+        <div class="col-md-3">
+            <img src="http://angularscript.com/wp-content/uploads/2015/04/ngRadialGauge.jpg" style="zoom: 85%;">
+            <h3 align="center" style="margin-top: -2em;">Battery Voltage</h3>
+        </div>
+        <div class="col-md-3">
+            <img src="http://angularscript.com/wp-content/uploads/2015/04/ngRadialGauge.jpg" style="zoom: 85%;">
+            <h3 align="center" style="margin-top: -2em;">Engine Coolant Temperature</h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-hover">
+                <tr>
+                    <th>Reading</th>
+                    <th>Value</th>
+                    <th>Units</th>
+                </tr>
+                <tr>
+                    <td>Total Trip Distance</td>
+                    <td>100</td>
+                    <td>mi</td>
+                </tr>
+                <tr>
+                    <td>Total Vehicle Distance</td>
+                    <td>0</td>
+                    <td>mi</td>
+                </tr>
+                <tr>
+                    <td>Total Idle Fuel Used</td>
+                    <td>0</td>
+                    <td>gal</td>
+                </tr>
+                <tr>
+                    <td>Total Idle Hours</td>
+                    <td>0</td>
+                    <td>hrs</td>
+                </tr>
+                <tr>
+                    <td>Trip Fuel Used</td>
+                    <td>0</td>
+                    <td>gal</td>
+                </tr>
+                <tr>
+                    <td>Total Fuel Used</td>
+                    <td>0</td>
+                    <td>gal</td>
+                </tr>
+                <tr>
+                    <td>Total PTO Fuel</td>
+                    <td>0</td>
+                    <td>gal</td>
+                </tr>
+                <tr>
+                    <td>Total Engine Hours</td>
+                    <td>0</td>
+                    <td>hrs</td>
+                </tr>
+                <tr>
+                    <td>Average Fuel Economy</td>
+                    <td>0</td>
+                    <td>mpg</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h3>Vehicle Location</h3>
+            <img src="http://cdn.newsapi.com.au/image/v1/0a0ceda4bda18e664ffac1a8fa86a7d1">
+        </div>
+    </div>
+
 </div>
 
-<button (click)="goBack()" class="btn btn-default">Back</button>
+<button (click)="goBack()" class="btn btn-default" style="margin-top:2em">Back</button>

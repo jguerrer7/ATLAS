@@ -56,9 +56,18 @@ export class FleetChartComponent implements OnInit {
     public barChartType: string = 'bar';
     public barChartLegend: boolean = true;
 
-    public barChartData: any[] = [
+    public barChartFuelData: any[] = [
         { data: [65, 59, 80, 81, 56, 55, 40], label: 'Fuel Used' },
         { data: [28, 48, 40, 19, 86, 27, 90], label: 'Idle Fuel Used' }
+    ];
+
+    public barChartMileageData: any[] = [
+        { data: [65, 59, 80, 81, 56, 55, 40], label: 'Mileage' },
+    ];
+
+    public barChartRunData: any[] = [
+        { data: [65, 59, 80, 81, 56, 55, 40], label: 'Hours' },
+        { data: [28, 48, 40, 19, 86, 27, 90], label: 'Idle Hours' }
     ];
 
     public chartColors: any[] = [

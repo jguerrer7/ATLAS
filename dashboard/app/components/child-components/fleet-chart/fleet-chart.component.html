@@ -8,7 +8,7 @@
         <div>
             <div style="display: block">
                 <canvas baseChart
-                    [datasets]="barChartData"
+                    [datasets]="barChartFuelData"
                     [labels]="barChartLabels"
                     [options]="barChartOptions"
                     [legend]="barChartLegend"
@@ -26,7 +26,7 @@
         <div>
             <div style="display: block">
                 <canvas baseChart
-                    [datasets]="barChartData"
+                    [datasets]="barChartMileageData"
                     [labels]="barChartLabels"
                     [options]="barChartOptions"
                     [legend]="barChartLegend"
@@ -44,7 +44,7 @@
         <div>
             <div style="display: block">
                 <canvas baseChart
-                    [datasets]="barChartData"
+                    [datasets]="barChartRunData"
                     [labels]="barChartLabels"
                     [options]="barChartOptions"
                     [legend]="barChartLegend"
@@ -56,5 +56,14 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <button class="btn btn-danger" type="button">
+        <i class="fa fa-cogs"></i> DTC <span class="badge">1</span>
+    </button>
+    <button class="btn btn-default" type="button">
+        <i class="fa fa-exclamation-triangle"></i> Triggers <span class="badge">0</span>
+    </button>
 </div>
 </div>
